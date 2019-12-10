@@ -18,9 +18,13 @@ public class NotificationService {
     void send(NotificationAgentDto notificationDto) {
 
         User user = userService.getById(notificationDto.getIdUserReciever());
-        log.info("Send push to  number \"{}\" ",user.getPhone());
-        log.info("Type:  \"{}\" Title: \" {}\"",notificationDto.getNotificationType(),notificationDto.getTitle());
-        log.info("Message:  \"{}\"",notificationDto.getMessage());
+        if (user.getPhone()!=null) {
+            log.info("Send push to  number \"{}\" ", user.getPhone());
+            log.info("Type:  \"{}\" Title: \" {}\"", notificationDto.getNotificationType(), notificationDto.getTitle());
+            log.info("Message:  \"{}\"", notificationDto.getMessage());
+        }
+        else
+        log.info("Can't send push for user id  {}. Phone field is empty",user.getId());
 
 
     }
