@@ -1,6 +1,5 @@
-package com.parcom.notifier.notification;
+package com.parcom.notifier_agent_push.notification;
 
-import com.parcom.notifier.notification.NotificationType;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

@@ -1,4 +1,4 @@
-package com.parcom.notifier;
+package com.parcom.notifier_agent_push;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
