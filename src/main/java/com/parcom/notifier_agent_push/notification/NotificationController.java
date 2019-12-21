@@ -20,7 +20,7 @@ public class NotificationController {
 
     private  final NotificationService notificationService;
 
-    @PostMapping("/")
+    @PostMapping
     @ApiOperation(value = "Send notification")
     public String create(@RequestBody NotificationAgentDto notificationAgentDto,
                        BindingResult bindingResult) throws BindException {
