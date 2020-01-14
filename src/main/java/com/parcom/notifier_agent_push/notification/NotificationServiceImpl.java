@@ -1,5 +1,6 @@
 package com.parcom.notifier_agent_push.notification;
 
+import com.parcom.asyncdto.NotificationAgentDto;
 import com.parcom.notifier_agent_push.user.User;
 import com.parcom.notifier_agent_push.user.UserService;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ public class NotificationServiceImpl implements NotificationService {
     @Override
     public void send(NotificationAgentDto notificationDto) {
 
-        User user = userService.getById(notificationDto.getIdUserReciever());
+        User user = userService.getById(notificationDto.getIdUserReceiver());
         if (user.getPhone()!=null) {
             log.info("Send push to  number \"{}\" ", user.getPhone());
             log.info("Type:  \"{}\" Title: \" {}\"", notificationDto.getNotificationType(), notificationDto.getTitle());
