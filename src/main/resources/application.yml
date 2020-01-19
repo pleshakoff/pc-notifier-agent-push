@@ -31,6 +31,6 @@ management:
         include: "health,prometheus"
   metrics:
     tags:
-      application: ${spring:application:name}
+      application: ${spring.application.name}
 
 
